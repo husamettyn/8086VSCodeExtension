@@ -1,0 +1,11 @@
+{
+  "name": "8086vscodeextension",
+  "version": "1.0.0",
+  "description": "Coded by Hüsamettin IŞIKTAŞ and Yusuf Taha TÜTEN",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
