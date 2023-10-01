@@ -1,0 +1,59 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "8086 Assembly",
+	"patterns": [
+		{
+			"include": "#keywords"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "comment.line",
+					"match": ";.*$",
+					"captures": {
+					"0": { "name": "comment.line" }
+					}
+				},
+				{
+					"name": "keyword.control",
+					"match": "\\b(MOV|ADD|SUB|JMP|CMP|NOP|PUSH|POP|XOR|CALL)\\b",
+					"captures": {
+					"0": { "name": "keyword.control" }
+					}
+				},
+				{
+					"name": "variable.language",
+					"match": "\\b(AX|BX|CX|DX|AH|BH|CH|DH|AL|BL|CL|DL|DW|DB|DD|DS|CS|SS)\\b",
+					"captures": {
+					"0": { "name": "variable.language" }
+					}
+				},
+				{
+					"name": "constant.numeric",
+					"match": "\\b[0-9A-Fa-f]+[hH]?\\b",
+					"captures": {
+					"0": { "name": "constant.numeric" }
+					}
+				},
+				{
+					"name": "support.other", // buranın label'ını değiştir.
+					"match": "\\b(RET|RETF|END|ENDP|ENDS|SEGMENT|PARA|PROC|FAR|ASSUME)\\b",
+					"captures": {
+						"0":{"name": "support.variable"}
+					}
+				},
+				{
+					"name": "string.quoted",
+					"match": "([\"'])(.*?)\\1",
+					"captures": {
+						"0":{"name": "string.quoted"}
+					}
+				}
+
+				]
+		}
+	},
+	"scopeName": "source.asm"
+}

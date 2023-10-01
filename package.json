@@ -1,11 +1,26 @@
 {
-  "name": "8086vscodeextension",
-  "version": "1.0.0",
-  "description": "Coded by Hüsamettin IŞIKTAŞ and Yusuf Taha TÜTEN",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "8086-assembly-extension",
+  "displayName": "8086 Assembly Extension",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.82.0"
   },
-  "author": "",
-  "license": "ISC"
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+      "languages": [{
+        "id": "8086asm",
+        "aliases": ["8086 Assembly", "8086asm"],
+        "extensions": [".asm"],
+        "configuration": "./language-configuration.json"
+      }],
+      "grammars": [{
+        "language": "8086asm",
+        "scopeName": "source.asm",
+        "path": "./syntaxes/8086asm.tmLanguage.json"
+      }
+    ]
+  }
 }
