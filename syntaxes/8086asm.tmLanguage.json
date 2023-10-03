@@ -18,7 +18,7 @@
 				},
 				{
 					"name": "keyword.control",
-					"match": "\\b(MOV|ADD|SUB|JMP|CMP|NOP|PUSH|POP|XOR|CALL)\\b",
+					"match": "\\b(MOV|ADD|SUB|JMP|CMP|NOP|PUSH|POP|XOR|CALL|LOOP)\\b",
 					"captures": {
 					"0": { "name": "keyword.control" }
 					}
@@ -38,17 +38,24 @@
 					}
 				},
 				{
-					"name": "support.other", // buranın label'ını değiştir.
+					"name": "entity.name.function",
 					"match": "\\b(RET|RETF|END|ENDP|ENDS|SEGMENT|PARA|PROC|FAR|ASSUME)\\b",
 					"captures": {
-						"0":{"name": "support.variable"}
+					"0":{"name": "entity.name.function"}
+					}
+				},
+				{
+					"name": "keyword.control",
+					"match": "\\b\\w+:",
+					"captures": {
+					"0": {"name": "keyword.control"}
 					}
 				},
 				{
 					"name": "string.quoted",
 					"match": "([\"'])(.*?)\\1",
 					"captures": {
-						"0":{"name": "string.quoted"}
+					"0":{"name": "string.quoted"}
 					}
 				}
 

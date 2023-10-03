@@ -28,7 +28,7 @@ CSG SEGMENT PARA 'CS'
 				CIFT_LBL: 
 					INC BYTE PTR [SI]
 				
-			LOOP L1
+			LOOP L1 
 			
 			MOV AX, NOFELEM
 			SUB AX, TEK
