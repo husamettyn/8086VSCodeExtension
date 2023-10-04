@@ -21,6 +21,12 @@
         "scopeName": "source.asm",
         "path": "./syntaxes/8086asm.tmLanguage.json"
       }
+    ],
+    "snippets": [
+      {
+        "language": "8086asm",
+        "path": "./snippets/snippets.code-snippets"
+      }
     ]
   }
 }

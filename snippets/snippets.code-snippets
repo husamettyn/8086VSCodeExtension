@@ -1,0 +1,32 @@
+{
+    "EXE Type": {
+        "prefix": "!exe",
+        "body": [
+"STG SEGMENT PARA STACK 'ST_'",
+"   ; STACK",
+"STG ENDS",
+"",
+"DSG SEGMENT PARA 'DS_'",
+"   ; DATA",
+"DSG ENDS",
+"",
+"CSG SEGMENT PARA 'CS_'",
+"   ASSUME CS: CSG, DS: DSG, SS: STG",
+"   MAIN PROC FAR",
+"       PUSH DS",
+"       XOR AX, AX",
+"       PUSH AX",
+"       MOV AX, DSG",
+"       MOV DS, AX",
+"",
+"       ; YOUR CODE HERE",
+"",
+"       RETF",
+"       MAIN ENDP",
+"CSG ENDS",
+"   END MAIN",
+        ],
+        "description": "EXE Type Program"
+
+    }
+}
